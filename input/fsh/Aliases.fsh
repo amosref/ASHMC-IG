@@ -1,7 +1,8 @@
 
 // CS
-Alias: $csOrgHierType =      http://fhir.ashmc.co.il/cs/org-hier-type
-Alias: $csOrgTafType =       http://fhir.ashmc.co.il/cs/tafnit-dept-type
+Alias: $csOrgHierType =                  http://fhir.ashmc.co.il/cs/org-hier-type
+Alias: $csOrgTafType =                   http://fhir.ashmc.co.il/cs/tafnit-dept-type
+Alias: $csEncounterLocalIdentifierType = http://fhir.ashmc.co.il/cs/encounter-local-identifier-type
 
 // VS
 Alias: $vsOrgHierType =      http://fhir.dgmc.health.gov.il/ValueSet/org-hier-type

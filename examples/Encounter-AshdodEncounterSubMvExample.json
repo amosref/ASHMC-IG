@@ -1,6 +1,6 @@
 {
   "resourceType": "Encounter",
-  "id": "AshdodEncounterSubExample",
+  "id": "AshdodEncounterSubMvExample",
   "meta": {
     "security": [
       {
@@ -10,7 +10,7 @@
       }
     ],
     "profile": [
-      "http://fhir.ashmc.co.il/StructureDefinition/encounter-sub-cml"
+      "http://fhir.ashmc.co.il/StructureDefinition/encounter-sub-mv"
     ]
   },
   "identifier": [
@@ -24,34 +24,8 @@
           }
         ]
       },
-      "system": "http://fhir.ashmc.co.il/identifier/medical-record-cml",
-      "value": "MR-ADM-98765"
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "system": "http://fhir.ashmc.co.il/cs/encounter-local-identifier-type",
-            "code": "adm-strong",
-            "display": "admission"
-          }
-        ]
-      },
-      "system": "http://fhir.ashmc.co.il/identifier/medical-record-cml",
-      "value": "MR-ADM-98765"
-    },
-    {
-      "type": {
-        "coding": [
-          {
-            "system": "http://fhir.ashmc.co.il/cs/encounter-local-identifier-type",
-            "code": "followup",
-            "display": "Followup"
-          }
-        ]
-      },
-      "system": "http://fhir.ashmc.co.il/identifier/medical-record-cml",
-      "value": "MR-FU-12345"
+      "system": "http://fhir.ashmc.co.il/identifier/mv-unit-id",
+      "value": "MR-MV-98765"
     }
   ],
   "class": {
@@ -79,10 +53,6 @@
     ]
   },
   "subject": {
-    "identifier": {
-      "system": "http://fhir.ashmc.co.il/identifier/pat-id-tafnit",
-      "value": "123456789"
-    },
     "reference": "Patient/ashmc-patient-001"
   },
   "participant": [
@@ -136,7 +106,7 @@
   ],
   "serviceProvider": {
     "identifier": {
-      "system": "http://fhir.ashmc.co.il/identifier/cml-unit-id",
+      "system": "http://fhir.ashmc.co.il/identifier/mv-unit-id",
       "value": "DEPT-CARDIO"
     }
   },

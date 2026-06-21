@@ -16,10 +16,12 @@ Description: "Asuta Ashdod top-level hospitalization encounter profile with loca
 * identifier.type.coding.display = "Strong Identifier" (exactly)
 * class.system = "http://terminology.hl7.org/CodeSystem/v3-ActCode" (exactly)
 * type[hospitalization].coding.system = "http://fhir.health.gov.il/cs/il-core-encounter-type" (exactly)
-* serviceType.extension contains $dar named dar 1..1
-* serviceType.extension[dar].url = $dar (exactly)
-* serviceType.extension[dar].valueCode = #unknown (exactly)
-* subject.identifier.system = "http://fhir.ashmc.co.il/identifier/pat-id-tafnit" (exactly)
+* type[hospitalization].coding.code = #hospitalization-hdp (exactly)
+* extension[paying-entity].valueCodeableConcept.coding.system = "http://fhir.ashmc.co.il/cs/enc-paying-entity" (exactly)
+* serviceType.coding 1..*
+* serviceType.coding.system = "http://snomed.info/sct" (exactly)
+* serviceType.coding.code = #224891009 (exactly)
+* serviceType.coding.display = "Healthcare services (qualifier value)" (exactly)
 // * reasonCode[moh-reason-code].coding.system = "http://fhir.health.gov.il/cs/patient-visit-reason-moh" (exactly)
 * reasonCode[moh-reason-code] ^patternCodeableConcept.coding.system = "http://fhir.health.gov.il/cs/patient-visit-reason-moh"
 * reasonCode contains ashmc 0..*

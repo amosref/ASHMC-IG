@@ -1,30 +1,18 @@
-Instance: AshdodEncounterSubExample
-InstanceOf: AsutaAshdodEncounterSubCml
+Instance: AshdodEncounterSubMvExample
+InstanceOf: AsutaAshdodEncounterSubMv
 Usage: #example
-Title: "Asuta Ashdod Sub Encounter Example"
-Description: "Valid example of an inpatient care segment encounter at Asuta Ashdod"
+Title: "Asuta Ashdod Sub Encounter MV"
+Description: "Valid example of an inpatient care segment encounter at Asuta Ashdod via MV interface"
 
 * meta.security[HDP].system = "http://fhir.health.gov.il/cs/il-hdp-information-buckets"
 * meta.security[HDP].code = #encounterInformation
 * meta.security[HDP].display = "ביקורים"
 
-* identifier[adm].system = "http://fhir.ashmc.co.il/identifier/medical-record-cml"
-* identifier[adm].value = "MR-ADM-98765"
-* identifier[adm].type.coding.system = "http://fhir.health.gov.il/cs/il-core-identifier-type"
-* identifier[adm].type.coding.code = #strong-id
-* identifier[adm].type.coding.display = "Strong Identifier"
-
-* identifier[adm-local].system = "http://fhir.ashmc.co.il/identifier/medical-record-cml"
-* identifier[adm-local].value = "MR-ADM-98765"
-* identifier[adm-local].type.coding.system = "http://fhir.ashmc.co.il/cs/encounter-local-identifier-type"
-* identifier[adm-local].type.coding.code = #adm-strong
-* identifier[adm-local].type.coding.display = "admission"
-
-* identifier[followup].system = "http://fhir.ashmc.co.il/identifier/medical-record-cml"
-* identifier[followup].value = "MR-FU-12345"
-* identifier[followup].type.coding.system = "http://fhir.ashmc.co.il/cs/encounter-local-identifier-type"
-* identifier[followup].type.coding.code = #followup
-* identifier[followup].type.coding.display = "Followup"
+* identifier.system = "http://fhir.ashmc.co.il/identifier/mv-unit-id"
+* identifier.value = "MR-MV-98765"
+* identifier.type.coding.system = "http://fhir.health.gov.il/cs/il-core-identifier-type"
+* identifier.type.coding.code = #strong-id
+* identifier.type.coding.display = "Strong Identifier"
 
 * status = #in-progress
 
@@ -40,8 +28,6 @@ Description: "Valid example of an inpatient care segment encounter at Asuta Ashd
 * serviceType.coding.display = "Cardiology"
 
 * subject = Reference(Patient/ashmc-patient-001)
-* subject.identifier.system = "http://fhir.ashmc.co.il/identifier/pat-id-tafnit"
-* subject.identifier.value = "123456789"
 
 * participant[primary-performer].type.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ParticipationType"
 * participant[primary-performer].type.coding.code = #PPRF
@@ -60,7 +46,7 @@ Description: "Valid example of an inpatient care segment encounter at Asuta Ashd
 * location[nursing-unit].physicalType.coding.code = #hospital-nursing-unit
 * location[nursing-unit].physicalType.coding.display = "Hospital nursing unit"
 
-* serviceProvider.identifier.system = "http://fhir.ashmc.co.il/identifier/cml-unit-id"
+* serviceProvider.identifier.system = "http://fhir.ashmc.co.il/identifier/mv-unit-id"
 * serviceProvider.identifier.value = "DEPT-CARDIO"
 
 * partOf = Reference(Encounter/AshdodEncounterMainExample)

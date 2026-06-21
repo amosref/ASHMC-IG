@@ -8,6 +8,7 @@ Description: "Asuta Ashdod community/HMO ambulatory encounter profile with local
 * ^status = #draft
 
 * extension[modeOfArrival].valueCoding.system = "http://fhir.health.gov.il/cs/patient-mode-of-arrival-moh" (exactly)
+* extension[paying-entity].valueCodeableConcept.coding.system = "http://fhir.ashmc.co.il/cs/enc-paying-entity" (exactly)
 * identifier.system = "http://fhir.ashmc.co.il/identifier/tafnit-admission-no" (exactly)
 * identifier.type ^alias = "חשוב למזהה החזק"
 * identifier.type.coding 1..1

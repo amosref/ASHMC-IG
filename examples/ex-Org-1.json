@@ -50,7 +50,7 @@
               {
                 "system": "http://fhir.health.gov.il/cs/department-type-moh",
                 "code": "55100",
-                "display": "חדרי מיון \\ לידה \\ נתוח - ר.דחופה יולדות"
+                "display": "ר.דחופה יולדות"
               }
             ]
           },

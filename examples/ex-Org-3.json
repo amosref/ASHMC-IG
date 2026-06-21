@@ -44,7 +44,7 @@
         {
           "system": "http://fhir.health.gov.il/cs/department-type-moh",
           "code": "32020",
-          "display": "מרפאות - אנדוקרינולוגיה ילדים"
+          "display": "אנדוקרינולוגיה ילדים"
         }
       ]
     },

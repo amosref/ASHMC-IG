@@ -13,6 +13,11 @@ Description: "Valid example of a top-level hospitalization encounter at Asuta As
 * extension[modeOfArrival].valueCoding.code = #10
 * extension[modeOfArrival].valueCoding.display = "אמבולנס רגיל"
 
+* extension[paying-entity].url = "http://fhir.health.gov.il/StructureDefinition/ext-encounter-paying-entity"
+* extension[paying-entity].valueCodeableConcept.coding.system = "http://fhir.ashmc.co.il/cs/enc-paying-entity"
+* extension[paying-entity].valueCodeableConcept.coding.code = #CLALIT
+* extension[paying-entity].valueCodeableConcept.coding.display = "קופת חולים כללית"
+
 * identifier.system = "http://fhir.ashmc.co.il/identifier/tafnit-admission-no"
 * identifier.value = "ADM-2025-001234"
 * identifier.type.coding.system = "http://fhir.health.gov.il/cs/il-core-identifier-type"
@@ -28,12 +33,11 @@ Description: "Valid example of a top-level hospitalization encounter at Asuta As
 * type[hospitalization].coding.system = "http://fhir.health.gov.il/cs/il-core-encounter-type"
 * type[hospitalization].coding.code = #hospitalization-hdp
 
-* serviceType.extension[dar].url = "http://hl7.org/fhir/StructureDefinition/data-absent-reason"
-* serviceType.extension[dar].valueCode = #unknown
+* serviceType.coding.system = "http://snomed.info/sct"
+* serviceType.coding.code = #224891009
+* serviceType.coding.display = "Healthcare services (qualifier value)"
 
 * subject = Reference(Patient/ashmc-patient-001)
-* subject.identifier.system = "http://fhir.ashmc.co.il/identifier/pat-id-tafnit"
-* subject.identifier.value = "123456789"
 
 * period.start = "2025-03-15T08:30:00+02:00"
 

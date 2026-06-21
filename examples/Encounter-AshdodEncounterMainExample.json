@@ -21,6 +21,18 @@
         "display": "אמבולנס רגיל"
       },
       "url": "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"
+    },
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://fhir.ashmc.co.il/cs/enc-paying-entity",
+            "code": "CLALIT",
+            "display": "קופת חולים כללית"
+          }
+        ]
+      },
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-encounter-paying-entity"
     }
   ],
   "identifier": [
@@ -54,18 +66,15 @@
     }
   ],
   "serviceType": {
-    "extension": [
+    "coding": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-        "valueCode": "unknown"
+        "system": "http://snomed.info/sct",
+        "code": "224891009",
+        "display": "Healthcare services (qualifier value)"
       }
     ]
   },
   "subject": {
-    "identifier": {
-      "system": "http://fhir.ashmc.co.il/identifier/pat-id-tafnit",
-      "value": "123456789"
-    },
     "reference": "Patient/ashmc-patient-001"
   },
   "period": {

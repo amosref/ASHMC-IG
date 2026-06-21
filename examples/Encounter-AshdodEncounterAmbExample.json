@@ -21,6 +21,18 @@
         "display": "אמבולנס רגיל"
       },
       "url": "http://hl7.org/fhir/StructureDefinition/encounter-modeOfArrival"
+    },
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://fhir.ashmc.co.il/cs/enc-paying-entity",
+            "code": "CLALIT",
+            "display": "קופת חולים כללית"
+          }
+        ]
+      },
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-encounter-paying-entity"
     }
   ],
   "identifier": [

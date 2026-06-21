@@ -1,6 +1,6 @@
 RuleSet: ConformanceMetadata
-* ^version = "0.5.1"
+* ^version = "0.6.0"
 * ^publisher = "Assuta Ashdod Medical Center"
-* ^date = "2026-05-24"
+* ^date = "2026-06-21"
 * ^contact[0].telecom[0].system = #email
 * ^contact[0].telecom[0].value = "contact@example.org"

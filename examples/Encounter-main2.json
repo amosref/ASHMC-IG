@@ -54,10 +54,11 @@
     }
   ],
   "serviceType": {
-    "extension": [
+    "coding": [
       {
-        "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-        "valueCode": "unknown"
+        "system": "http://snomed.info/sct",
+        "code": "224891009",
+        "display": "Healthcare services (qualifier value)"
       }
     ]
   },
@@ -78,11 +79,6 @@
           "system": "http://fhir.health.gov.il/cs/patient-visit-reason-moh",
           "code": "30",
           "display": "תאונת דרכים"
-        },
-        {
-          "system": "http://fhir.ashmc.co.il/cs/visit-reason",
-          "code": "30",
-          "display": "תאונת דרכים"
         }
       ]
     },
@@ -90,8 +86,8 @@
       "coding": [
         {
           "system": "http://fhir.ashmc.co.il/cs/visit-reason",
-          "code": "4",
-          "display": "פינוי מד\"א"
+          "code": "30",
+          "display": "תאונת דרכים"
         }
       ]
     }

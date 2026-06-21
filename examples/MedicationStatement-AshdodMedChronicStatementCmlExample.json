@@ -1,0 +1,103 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "AshdodMedChronicStatementCmlExample",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "medications",
+        "display": "תרופות"
+      }
+    ],
+    "profile": [
+      "http://fhir.ashmc.co.il/StructureDefinition/med-chronic-statement-cml"
+    ]
+  },
+  "extension": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "chronic",
+            "system": "http://fhir.health.gov.il/cs/il-core-medication-course-of-therapy-type",
+            "display": "Chronic therapy"
+          }
+        ]
+      },
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-medication-course-of-therapy-type"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type",
+            "code": "strong-id",
+            "display": "Strong Identifier"
+          }
+        ]
+      },
+      "system": "http://fhir.ashmc.co.il/identifier/med-cml-chronic",
+      "value": "MED.CML.CHRONIC.654001"
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.ashmc.co.il/cs/cml-med-code",
+        "code": "67890",
+        "display": "Metformin 850mg"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "109081006",
+        "display": "Metformin (substance)"
+      }
+    ],
+    "text": "Metformin 850mg"
+  },
+  "dosage": [
+    {
+      "timing": {
+        "repeat": {
+          "frequency": 2,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "26643006",
+            "display": "Oral route"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 850,
+            "unit": "mg",
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
+          }
+        }
+      ],
+      "text": "850mg twice daily with meals"
+    }
+  ],
+  "status": "active",
+  "subject": {
+    "reference": "Patient/ashmc-patient-001"
+  },
+  "context": {
+    "reference": "Encounter/AshdodEncounterSubExample"
+  },
+  "effectiveDateTime": "2025-03-15T08:00:00+02:00",
+  "dateAsserted": "2025-03-15",
+  "informationSource": {
+    "reference": "Organization/HOSP.100"
+  }
+}

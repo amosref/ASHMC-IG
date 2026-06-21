@@ -13,6 +13,11 @@ Description: "Valid example of a community/HMO ambulatory encounter at Asuta Ash
 * extension[modeOfArrival].valueCoding.code = #10
 * extension[modeOfArrival].valueCoding.display = "אמבולנס רגיל"
 
+* extension[paying-entity].url = "http://fhir.health.gov.il/StructureDefinition/ext-encounter-paying-entity"
+* extension[paying-entity].valueCodeableConcept.coding.system = "http://fhir.ashmc.co.il/cs/enc-paying-entity"
+* extension[paying-entity].valueCodeableConcept.coding.code = #CLALIT
+* extension[paying-entity].valueCodeableConcept.coding.display = "קופת חולים כללית"
+
 * identifier.system = "http://fhir.ashmc.co.il/identifier/tafnit-admission-no"
 * identifier.value = "AMB-2025-005678"
 * identifier.type.coding.system = "http://fhir.health.gov.il/cs/il-core-identifier-type"
