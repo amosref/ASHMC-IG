@@ -8,7 +8,7 @@ Description: "Valid example of an inpatient care segment encounter at Asuta Ashd
 * meta.security[HDP].code = #encounterInformation
 * meta.security[HDP].display = "ביקורים"
 
-* identifier.system = "http://fhir.ashmc.co.il/identifier/mv-unit-id"
+* identifier.system = "http://fhir.ashmc.co.il/identifier/medical-record-mv"
 * identifier.value = "MR-MV-98765"
 * identifier.type.coding.system = "http://fhir.health.gov.il/cs/il-core-identifier-type"
 * identifier.type.coding.code = #strong-id

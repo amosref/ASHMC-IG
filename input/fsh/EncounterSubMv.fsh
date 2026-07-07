@@ -7,7 +7,7 @@ Description: "Asuta Ashdod inpatient care segment encounter profile for the MV i
 * ^url = "http://fhir.ashmc.co.il/StructureDefinition/encounter-sub-mv"
 * ^status = #draft
 
-* identifier.system = "http://fhir.ashmc.co.il/identifier/mv-unit-id" (exactly)
+* identifier.system = "http://fhir.ashmc.co.il/identifier/medical-record-mv" (exactly)
 * identifier.type 1..1
 * identifier.type.coding 1..1
 * identifier.type.coding.system = "http://fhir.health.gov.il/cs/il-core-identifier-type" (exactly)

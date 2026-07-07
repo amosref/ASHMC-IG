@@ -24,7 +24,7 @@
           }
         ]
       },
-      "system": "http://fhir.ashmc.co.il/identifier/mv-unit-id",
+      "system": "http://fhir.ashmc.co.il/identifier/medical-record-mv",
       "value": "MR-MV-98765"
     }
   ],
