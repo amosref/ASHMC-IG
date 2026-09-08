@@ -20,8 +20,11 @@ Description: "Asuta Ashdod inpatient care segment encounter profile for the CML 
 * identifier[adm].system = "http://fhir.ashmc.co.il/identifier/medical-record-cml" (exactly)
 * identifier[adm].type 1..1
 * identifier[adm].type ^patternCodeableConcept.coding[0] = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id "Strong Identifier"
-* identifier[adm].type ^patternCodeableConcept.coding[1] = http://fhir.ashmc.co.il/cs/encounter-local-identifier-type#adm-strong "Strong Admission Identifier"
 * identifier[adm].type.coding ^alias = "סוג מזהה - חזק"
+
+* identifier[adm-local].system = "http://fhir.ashmc.co.il/identifier/medical-record-cml" (exactly)
+* identifier[adm-local].type 1..1
+* identifier[adm-local].type ^patternCodeableConcept.coding[0] = http://fhir.ashmc.co.il/cs/encounter-local-identifier-type#adm-strong "admission"
 
 * identifier[followup] ^alias = "מזהה ביקור באשפוז"
 * identifier[followup].system = "http://fhir.ashmc.co.il/identifier/medical-record-cml" (exactly)

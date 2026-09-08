@@ -1,0 +1,165 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "CML.MED.ORDER.5479776",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "medications",
+        "display": "תרופות"
+      }
+    ],
+    "profile": [
+      "http://fhir.ashmc.co.il/StructureDefinition/med-order-cml"
+    ]
+  },
+  "extension": [
+    {
+      "extension": [
+        {
+          "url": "role",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "code": "HO",
+                "system": "http://fhir.health.gov.il/cs/il-core-resource-role-context",
+                "display": "Hospitalization"
+              }
+            ]
+          }
+        }
+      ],
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-resource-role-context"
+    },
+    {
+      "url": "http://fhir.ashmc.co.il/StructureDefinition/ext-confirmed-by",
+      "valueReference": {
+        "reference": "Practitioner/ashmc-dr-cohen"
+      }
+    },
+    {
+      "url": "http://fhir.ashmc.co.il/StructureDefinition/ext-order-type",
+      "valueCode": "periodically"
+    },
+    {
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-medication-recorded-time",
+      "valueDateTime": "2025-03-15T10:00:00+02:00"
+    }
+  ],
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type",
+            "code": "strong-id",
+            "display": "Strong Identifier"
+          }
+        ]
+      },
+      "system": "http://fhir.ashmc.co.il/identifier/med-order-cml",
+      "value": "5479776-768130"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-medication-request-category",
+          "code": "inpatient",
+          "display": "Inpatient"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://fhir.ashmc.co.il/cs/cml-med-code",
+        "code": "CML-CEFT-2G",
+        "display": "Ceftriaxone 2g"
+      },
+      {
+        "system": "http://fhir.ashmc.co.il/cs/internal-med-code",
+        "code": "BI-98765",
+        "display": "Ceftriaxone"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "372670001",
+        "display": "Ceftriaxone (substance)"
+      }
+    ],
+    "text": "Ceftriaxone 2g IV"
+  },
+  "courseOfTherapyType": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "code": "acute",
+        "display": "Short course (acute) therapy"
+      },
+      {
+        "system": "http://fhir.dgmc.health.gov.il/cs/cml-order-type",
+        "userSelected": true,
+        "code": "1",
+        "display": "Periodically"
+      }
+    ]
+  },
+  "dosageInstruction": [
+    {
+      "timing": {
+        "repeat": {
+          "timeOfDay": [
+            "08:00:00"
+          ],
+          "frequency": 1,
+          "period": 1,
+          "periodUnit": "d"
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "47625008",
+            "display": "Intravenous route"
+          }
+        ]
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "422145002",
+            "display": "Inject"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "doseQuantity": {
+            "value": 2,
+            "unit": "g",
+            "system": "http://unitsofmeasure.org",
+            "code": "g"
+          }
+        }
+      ],
+      "text": "Ceftriaxone 2g IV once daily"
+    }
+  ],
+  "intent": "order",
+  "status": "active",
+  "subject": {
+    "reference": "Patient/ashmc-patient-001"
+  },
+  "encounter": {
+    "reference": "Encounter/AshdodEncounterSubExample"
+  },
+  "authoredOn": "2025-03-15T10:00:00+02:00",
+  "requester": {
+    "reference": "Practitioner/ashmc-dr-cohen"
+  }
+}
