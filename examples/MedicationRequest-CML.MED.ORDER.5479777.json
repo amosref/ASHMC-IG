@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationRequest",
-  "id": "CML.MED.ORDER.5479776",
+  "id": "CML.MED.ORDER.5479777",
   "meta": {
     "security": [
       {
@@ -13,6 +13,83 @@
       "http://fhir.ashmc.co.il/StructureDefinition/med-order-cml"
     ]
   },
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "Cocktail",
+      "identifier": [
+        {
+          "system": "http://fhir.ashmc.co.il/identifier/cocktail-order-cml",
+          "value": "CML.COCKTAIL.ORDER.5479777"
+        }
+      ],
+      "code": {
+        "text": "SOL ROPIVACAINE 200MG/100ML NAROPIN 10 cc(ml) + INJ FENTANYL 0.1MG/2ML 20 mg"
+      },
+      "ingredient": [
+        {
+          "itemCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://fhir.ashmc.co.il/cs/cml-med-code",
+                "code": "LOCAL-CODE"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "386969005",
+                "display": "Ropivacaine"
+              }
+            ],
+            "text": "Ropivacaine 200mg/100mL (Naropin)"
+          },
+          "strength": {
+            "numerator": {
+              "value": 200,
+              "unit": "mg",
+              "system": "http://unitsofmeasure.org",
+              "code": "mg"
+            },
+            "denominator": {
+              "value": 1,
+              "unit": "Hour",
+              "system": "http://unitsofmeasure.org",
+              "code": "h"
+            }
+          }
+        },
+        {
+          "itemCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://fhir.ashmc.co.il/cs/cml-med-code",
+                "code": "LOCAL-CODE"
+              },
+              {
+                "system": "http://snomed.info/sct",
+                "code": "373492002",
+                "display": "Fentanyl"
+              }
+            ],
+            "text": "Fentanyl 0.1mg/2mL"
+          },
+          "strength": {
+            "numerator": {
+              "value": 20,
+              "unit": "mcg",
+              "system": "http://unitsofmeasure.org",
+              "code": "ug"
+            },
+            "denominator": {
+              "value": 1,
+              "unit": "Hour",
+              "system": "http://unitsofmeasure.org",
+              "code": "h"
+            }
+          }
+        }
+      ]
+    }
+  ],
   "extension": [
     {
       "extension": [
@@ -39,11 +116,15 @@
     },
     {
       "url": "http://fhir.ashmc.co.il/StructureDefinition/ext-order-type",
-      "valueCode": "periodically"
+      "valueCode": "once"
+    },
+    {
+      "url": "http://fhir.ashmc.co.il/StructureDefinition/ext-protocol-name",
+      "valueString": "Epidural analgesia"
     },
     {
       "url": "http://fhir.health.gov.il/StructureDefinition/ext-medication-recorded-time",
-      "valueDateTime": "2025-03-15T10:00:00+02:00"
+      "valueDateTime": "2025-03-16T11:00:00+02:00"
     }
   ],
   "identifier": [
@@ -58,7 +139,7 @@
         ]
       },
       "system": "http://fhir.ashmc.co.il/identifier/med-order-cml",
-      "value": "5479776-768130"
+      "value": "5479777-768131"
     }
   ],
   "category": [
@@ -66,31 +147,14 @@
       "coding": [
         {
           "system": "http://fhir.health.gov.il/cs/il-core-medication-request-category",
-          "code": "inpatient",
-          "display": "Inpatient"
+          "code": "outpatient",
+          "display": "Outpatient"
         }
       ]
     }
   ],
-  "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://fhir.ashmc.co.il/cs/cml-med-code",
-        "code": "CML-CEFT-2G",
-        "display": "Ceftriaxone 2g"
-      },
-      {
-        "system": "http://fhir.ashmc.co.il/cs/internal-med-code",
-        "code": "BI-98765",
-        "display": "Ceftriaxone"
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "code": "372670001",
-        "display": "Ceftriaxone"
-      }
-    ],
-    "text": "Ceftriaxone 2g IV"
+  "medicationReference": {
+    "reference": "#Cocktail"
   },
   "courseOfTherapyType": {
     "coding": [
@@ -102,23 +166,13 @@
       {
         "system": "http://fhir.dgmc.health.gov.il/cs/cml-order-type",
         "userSelected": true,
-        "code": "1",
-        "display": "Periodically"
+        "code": "2",
+        "display": "Once"
       }
     ]
   },
   "dosageInstruction": [
     {
-      "timing": {
-        "repeat": {
-          "timeOfDay": [
-            "08:00:00"
-          ],
-          "frequency": 1,
-          "period": 1,
-          "periodUnit": "d"
-        }
-      },
       "extension": [
         {
           "valueCodeableConcept": {
@@ -136,8 +190,8 @@
         "coding": [
           {
             "system": "http://snomed.info/sct",
-            "code": "47625008",
-            "display": "Intravenous route"
+            "code": "404820008",
+            "display": "Epidural route"
           }
         ]
       },
@@ -152,15 +206,15 @@
       },
       "doseAndRate": [
         {
-          "doseQuantity": {
-            "value": 2,
-            "unit": "g",
+          "rateQuantity": {
+            "value": 8,
+            "unit": "cc/hour",
             "system": "http://unitsofmeasure.org",
-            "code": "g"
+            "code": "mL/h"
           }
         }
       ],
-      "text": "Ceftriaxone 2g IV once daily"
+      "text": "Epidural Ropivacaine/Fentanyl cocktail, continuous infusion"
     }
   ],
   "intent": "order",
@@ -171,7 +225,7 @@
   "encounter": {
     "reference": "Encounter/AshdodEncounterSubExample"
   },
-  "authoredOn": "2025-03-15T10:00:00+02:00",
+  "authoredOn": "2025-03-16T11:00:00+02:00",
   "requester": {
     "reference": "Practitioner/ashmc-dr-cohen"
   }

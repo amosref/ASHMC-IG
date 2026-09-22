@@ -1,0 +1,111 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "CML.MED.ALLERGY.8765432",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "allergiesAndIntolerances",
+        "display": "רגישויות"
+      }
+    ],
+    "profile": [
+      "http://fhir.ashmc.co.il/StructureDefinition/med-allergy-intolerance"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type",
+            "code": "strong-id",
+            "display": "Strong Identifier"
+          }
+        ]
+      },
+      "system": "http://fhir.ashmc.co.il/Identifier/med-allergy-intolerance",
+      "value": "8765432"
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "code": "confirmed"
+      }
+    ]
+  },
+  "category": [
+    "medication"
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "764146007",
+        "display": "Penicillin"
+      },
+      {
+        "system": "http://fhir.ashmc.co.il/cs/med-cml-code",
+        "code": "LOCAL-CODE"
+      }
+    ]
+  },
+  "reaction": [
+    {
+      "substance": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "764146007",
+            "display": "Penicillin"
+          }
+        ]
+      },
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "system": "http://fhir.ashmc.co.il/cs/reaction-cml-code",
+              "code": "LOCAL-CODE"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "39579001",
+              "display": "Anaphylaxis"
+            }
+          ]
+        }
+      ],
+      "exposureRoute": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "26643006",
+            "display": "Oral route"
+          }
+        ]
+      },
+      "severity": "severe",
+      "description": "Severe anaphylactic reaction requiring epinephrine",
+      "onset": "2024-03-10T09:15:00+02:00"
+    }
+  ],
+  "type": "allergy",
+  "patient": {
+    "reference": "Patient/ashmc-patient-001"
+  },
+  "recorder": {
+    "reference": "Practitioner/ashmc-dr-cohen"
+  },
+  "recordedDate": "2025-06-20"
+}

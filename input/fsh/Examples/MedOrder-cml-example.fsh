@@ -76,6 +76,9 @@ Description: "Valid example of an inpatient medication order at Asuta Ashdod via
 * dosageInstruction.timing.repeat.period = 1
 * dosageInstruction.timing.repeat.periodUnit = #d
 * dosageInstruction.timing.repeat.timeOfDay = "08:00:00"
+* dosageInstruction.extension[wayOfGiving].valueCodeableConcept.coding.system = "http://fhir.ashmc.co.il/cs/wayOfGiving"
+* dosageInstruction.extension[wayOfGiving].valueCodeableConcept.coding.code = #LOCAL-CODE
+
 * dosageInstruction.route.coding.system = "http://snomed.info/sct"
 * dosageInstruction.route.coding.code = #47625008
 * dosageInstruction.route.coding.display = "Intravenous route"

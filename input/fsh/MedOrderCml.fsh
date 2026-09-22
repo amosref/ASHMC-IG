@@ -2,7 +2,7 @@ Profile: AsutaAshdodMedicationRequestCml
 Parent: ILHDPMedicationRequest
 Id: med-order-cml
 Title: "Asuta Ashdod Medication Order CML Profile"
-Description: "Asuta Ashdod medication order (MedicationRequest) profile for the CML interface. For cocktail (compound) orders, a contained Medication resource with id 'Cocktail' SHALL be used, medicationReference SHALL reference '#Cocktail', and the contained resource SHALL follow the ingredient coding structure defined in the interface specification."
+Description: "Asuta Ashdod medication order (MedicationRequest) profile for the CML interface. For cocktail (compound) orders, a contained Medication resource with id 'Cocktail' SHALL be used and medicationReference SHALL reference '#Cocktail'. The contained resource SHALL have: identifier.system = http://fhir.ashmc.co.il/identifier/cocktail-order-cml (1..1); code.text (1..1) holding a free-text summary of the mixture; and one or more ingredient entries, each with itemCodeableConcept.coding sliced by system exactly as medicationCodeableConcept.coding is sliced on this profile (cml 1..1 fixed to http://fhir.ashmc.co.il/cs/cml-med-code, mv 0..1 fixed to http://fhir.ashmc.co.il/cs/mv-med-code, bi-id 0..1 fixed to http://fhir.ashmc.co.il/cs/internal-med-code, snomed 0..1 fixed to http://snomed.info/sct, atc 0..1 fixed to http://fhir.ashmc.co.il/cs/local-atc-med-code), and strength as a Ratio whose denominator is fixed to 1 Hour (http://unitsofmeasure.org#h). This structure is illustrated in full in the cocktail example instance but is not separately profiled, since it only ever exists as a contained resource within this profile."
 
 * ^url = "http://fhir.ashmc.co.il/StructureDefinition/med-order-cml"
 * ^status = #draft
@@ -24,10 +24,12 @@ Description: "Asuta Ashdod medication order (MedicationRequest) profile for the 
 * intent = #order
 
 * category[il-core] 1..1
-* category[il-core].coding.code = #inpatient (exactly)
-* category[il-core].coding.display = "Inpatient" (exactly)
 
 * encounter 1..1
+
+* contained 0..1
+
+* dosageInstruction.extension contains $extDosageWayOfGiving named wayOfGiving 0..1
 
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #value
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "system"

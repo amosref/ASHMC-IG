@@ -20,4 +20,5 @@ Alias: $extConfirmedBy =        http://fhir.ashmc.co.il/StructureDefinition/ext-
 Alias: $extOrderType =          http://fhir.ashmc.co.il/StructureDefinition/ext-order-type
 Alias: $extDailyDose =          http://fhir.ashmc.co.il/StructureDefinition/ext-daily-dose
 Alias: $extProtocolName =       http://fhir.ashmc.co.il/StructureDefinition/ext-protocol-name
+Alias: $extDosageWayOfGiving =  http://fhir.ashmc.co.il/StructureDefinition/dosageWayOfGiving
 Alias: $ext-resource-role-context = http://fhir.health.gov.il/StructureDefinition/ext-resource-role-context
